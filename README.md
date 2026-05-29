@@ -1,34 +1,56 @@
-[![Shipping files](https://github.com/neuefische/ds-eda-project-template/actions/workflows/workflow-03.yml/badge.svg?branch=main&event=workflow_dispatch)](https://github.com/neuefische/ds-eda-project-template/actions/workflows/workflow-03.yml)
-# ds-project-template
+# King County Housing Analysis
 
-Template for creating ds simple projects
+## Project Overview
 
-## Requirements
+This project performs an Exploratory Data Analysis (EDA) of residential properties in King County, Washington. The objective is to understand the key factors influencing house prices and provide data-driven recommendations for a specific client.
 
-- pyenv
-- python==3.11.3
+## Business Problem
 
-## Setup
+The client, Nicole Johnson, is looking to purchase a house in a lively and relatively central neighborhood while staying within a moderate budget.
 
-One of the first steps when starting any data science project is to create a virtual environment. For this project you have to create this environment from scratch yourself. However, you should be already familiar with the commands you will need to do so. The general workflow consists of... 
+## Dataset
 
-* setting the python version locally to 3.11.3
-* creating a virtual environment using the `venv` module
-* activating your newly created environment 
-* upgrading `pip` (This step is not absolutely necessary, but will save you trouble when installing some packages.)
-* installing the required packages via `pip`
+The dataset contains housing sales data from King County, Washington and includes price, bedrooms, bathrooms, living area, lot size, waterfront access, view rating, condition, grade, renovation data, zipcode, coordinates, and sales date.
 
-*Note: We do have the `requirements.txt` in the repository but please try to first install packages by yourself.*
+## Technologies Used
 
-At the end, you want to make sure that people who are interested in your project can create an identical environment on their own computer in order to be able to run your code without running into errors. Therefore you can create a `requirements file` and add it to your repository. You can create such a file by running the following command: 
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Jupyter Notebook
+- SQLAlchemy
+- PostgreSQL
 
-```bash
-pip freeze > requirements.txt
+## Key Insights
+
+1. Living area is one of the strongest drivers of house prices.
+2. Housing prices vary significantly across zipcodes.
+3. Waterfront properties command premium prices.
+4. Luxury homes create strong right-skewness in the price distribution.
+
+## Recommendations
+
+1. Focus on moderately priced central-adjacent neighborhoods.
+2. Prioritize living space over bedroom count.
+3. Monitor seasonal market timing.
+4. Consider renovated homes in mid-priced areas.
+
+## Repository Structure
+
+```text
+├── EDA_sajjad.ipynb
+├── README.md
+├── requirements.txt
+└── data/
 ```
 
-*Note: In rare case such a requirements file created with `pip freeze` might not ensure that another (especially M1 chip) user can install and execute it properly. This can happen if libraries need to be compiled (e.g. SciPy). Then it also depends on environment variables and the actual system libraries.*
+## How to Run
 
+```bash
+pip install -r requirements.txt
+jupyter notebook
+```
 
---- 
-## In Case of Failure
-If you fail to do the setup by yourself, then please revisit the previous repositories where you have done the setup and follow those steps.
+Open EDA_sajjad.ipynb and run all cells.
